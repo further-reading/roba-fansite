@@ -32,6 +32,14 @@ small {
     font-size: 0.75em;
 }
 
+main {
+    border-width: 0.25rem;
+    border-color: black;
+    border-style: double;
+    background-color: #031A3E;
+
+}
+
 /* grid */
 @media screen and (min-width: 70em){
     body {
@@ -109,7 +117,7 @@ small {
 
 /* exterenal nav */
 
-nav#external {
+#external {
     padding: 0.5em;
     background-color: #031A3E;
     border-radius: 0.5em;
@@ -119,16 +127,16 @@ nav#external {
     border-style: solid;
 }
 
-nav#external img {
+#external img {
     width: 45px;
     height: 45px;
 }
 
-nav#external ul {
+#external ul {
     list-style: none;
 }
 
-nav#external li{
+#external li{
     display: inline;
 }
 
@@ -137,14 +145,6 @@ nav#external li{
     margin-left: auto;
     margin-right: auto;
     width: 450px;
-}
-
-main {
-    border-width: 0.25rem;
-    border-color: black;
-    border-style: double;
-    background-color: #031A3E;
-
 }
 
 /* sections */
@@ -190,12 +190,15 @@ section > * {
     border-style: solid;
     margin-top: 0;
     grid-area: inset-right;
-    display: table;
-    
+    clear:both;
 }
 
 .inset * {
     color: white;
+}
+
+.inset_skinny {
+    display: table;
 }
 
 .inset h1 {
@@ -204,15 +207,19 @@ section > * {
 
 @media screen and (min-width: 50em){
     .has_inset {
-        margin: 0.5em;
+        margin: 0;
         display: grid;
         grid-template-columns: 60% 40%;
         grid-template-rows: auto;
-        grid-template-areas: "inset-left inset-right"
+        grid-template-areas: "inset-left inset-right";
     }
 
     .has_inset p {
         grid-area: inset-left;
+    }
+
+    section figure{
+        float:right;
     }
 }
 
@@ -263,7 +270,7 @@ section > * {
 }
 
 /* figures */
-figure {
+section figure {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
