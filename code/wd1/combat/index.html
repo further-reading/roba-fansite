@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Radiant: Offline Battle Arena</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="../styles/roba.css" />
+        <link rel="icon" href="../images/icon.png" />
+    </head>
+    <body>
+        <header>
+            <figure class="banner">
+                <a href='https://cs1.ucc.ie/~rwth1/wd1/'><img src="../images/banner.png" alt="Radiant: Offline Batter Arena official logo in stylized text" title='Back to hompage'/></a>
+            </figure>
+            <nav id="globalnav">
+                <ul>
+                    <li><a href='../setup'>Game Setup</a></li>
+                    <li><a href='../action_phase'>Action Phase</a></li>
+                    <li><a id='here'>Combat</a></li>
+                    <li><a href='../end_phase'>End Phase</a></li>
+                    <li><a href='../glossary'>Glossary</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+          <section class='text_box'>
+            <p>Combat is a core part of ROBA, taking place during the <a href='../action_phase'>Action Phase</a>. The order in which actions are taken is <b>important</b> as breaking the flow can give your opponent an edge.</p>
+            <section class="contents">
+              <h1>Combat Steps</h1>
+              <ol>
+                <li><h1><a href='#decleration'>Decleration Phase</a></h1>
+                  <ol>
+                    <li>Attacker declares target and participants of attack.</li>
+                    <li>Defender declares if blocking.</li>
+                  </ol>
+                </li>
+                <li><h1><a href='#clash'>Clash Phase</a></h1>
+                  <ol>
+                    <li>Attacker clashes.</li>
+                    <li>Defender clashes.</li>
+                    <li>Clash cards revealed.</li>
+                    <li>Clash card effects applied.</li>
+                  </ol>
+                </li>
+                <li><h1><a href='#resolution'>Resolution Phase</a></h1>
+                  <ol>
+                    <li>Damage and shield tallied.</li>
+                    <li>Defender declares target</li>
+                    <li>Damage applied</li>
+                  </ol>
+                </li>
+              </ol>
+            </section>
+          </section>
+          <section class='text_box'>
+            <h1 id="decleration">Decleration Phase</h1>
+            <section class="inset inset_skinny">
+                    <ol>
+                        <li>Attacker declares target and participants of attack.</li>
+                        <li>Defender declares if blocking.</li>
+                    </ol>
+                </section>
+            <p>All attacks start with the <b>Decleration Phase</b>. The decleration phase begins by the attacker declaring the target for their attack. they can also make it a <em>Team Attack</em> by involving multiple characters. The attacker should <b>commit</b> the participants to make it clear to the defender who is involved. The target can be an opposing <i>conduit</i> or <i>hero</i> in the same lane as the attacking hero(s).</p>
+            <p>If the defender has another ready hero in the lane, they may declare a block. The block will change the target of the attack, however as a cost the blocking hero's base damage is reduced to 0 and will become committed.</p>
+            <section class="inset">
+                  <strong>Due to the cost of blocking, there are a lot of factors to consider when choosing the target and whether to block.</strong>
+            </section>
+          </section>
+            <section class='text_box'>
+                <h1 id="clash">Clash Phase</h1>
+                <section class="inset inset_skinny">
+                    <ol>
+                        <li>Attacker clashes.</li>
+                        <li>Defender clashes.</li>
+                        <li>Clash cards revealed.</li>
+                        <li>Clash card effects applied.</li>
+                    </ol>
+                </section>
+                
+                <p>Once the <em>participants</em> have been declared the <b>Clash Phase</b> can begin. <i>Clashing</i> means to play a card face down, but remember that clashing is <i>optional</i> - you may choose to play no card.</p>
+                    
+                <p>When you are clashing with <i>multiple heroes</i> you must also declare which hero is clashing. Any clash effects, shields, etc will be applied to just this hero.</p>
+                
+                <p>After the Defender plays step the card are revealed and any <i>Clash Effects</i> are applied. Clash effects are written at the bottom of each card and have the <b>Clash</b> keyword.</p>
+                <section class="inset">
+                  <p>If a card says you can <b>clash again <em>immediately</em></b> it means you can immediately play another card in this combat. Unless the card states otherwise, you will then apply any clash effects and apply its damage and shield values in the next step.</p>
+                </section>
+            </section>
+            <section class="text_box">
+                <h1 id="resolution">Resolution Phase</h1>
+                <section class="inset inset_skinny">
+                    <ol>
+                        <li>Damage and Shield amounts tallied.</li>
+                        <li>Defender declares target.</li>
+                        <li>Damage applied.</li>
+                    </ol>
+                </section>
+                <section class='has_inset'>
+                    <p>In the <b>Resolution Phase</b> first tally the total damage done by participants in the combat. You do this by adding up the <b>Attack</b> values on your cards. If this was a <em>Team Attack</em>, the defender can then choose who will take damage from their hero, unless one of the heroes has <b>Vanguard</b>.</p>
+                    <section class='inset'>
+                        <p>Remember, back in the <i>Clash Phase</i> the attacker had to choose who plays the card - only that hero gets the shield bonus from the card.</p>
+                    </section>
+                </section>
+                <section class='has_inset'>
+                    <p>Once the total damage is tallied, it is applied to the hero, less any shield rating the hero has. Damage occurs simultaneously, so any defeated hero will still apply their full damage.</p>
+                    <section class='inset'>
+                        <p>Note that cards like Mato's <i>Battle Frenzy</i> won't get bonuses for being damaged since the damage was not present during the <i>Clash Phase</i>.</p>
+                    </section>
+                </section>
+                <section class='inset'>
+                    <strong>If two <b>Dieties</b> are defeated in the same combat, the attacker wins the game.</strong>
+                </section>
+            </section>
+            <section class='text_box'>
+                <h1>Example of Play</h1>
+                <section class='example'>
+                    <h1>Decleration Phase</h1>
+                    <ol>
+                        <li>The <em>attacker</em> <b>delcares</b> that he will attack the defender's <i>conduit</i> with <i>Mato</i> and <i>Corvus</i>, <em>committing</em> them.</li>
+                        <li>The <em>defender</em> <b>declares</b> that she will block with <i>Octavian</i>, which <em>commits</em> him.</li>
+                    </ol>
+                </section>
+                <section class='example'>
+                    <h1>Clash Phase</h1>
+                    <ol>
+                        <li>The <em>attacker</em> <b>clashes</b> by placing a card phase down next to <i>Corvus</i>.</li>
+                        <li>The <em>defender</em> <b>clashes</b> by playing a card face down next to <i>Octavian</i>.</li>
+                        <li> The <em>attacker</em> reveals that he has played <i>Battle Frenzy</i> while the defender reveals that she has played <i>Eternal Discipline</i>.</li>
+                        <li>The <em>attacker</em> resolves his clash effect for <i>Battle Frenzy</i> by adding <b>1 attack</b> to <i>Corvus</i> for every <b>2 wounds</b> on him.</li>
+                        <li>The <em>defender</em> resolves his clash effect for <i>Eternal Discipline</i> by clashing again immediately. She chooses to play <i>10,000 drills</i> and chooses to add its +2 bonus to <em>attack</em>.</li>
+                    </ol>
+                </section>
+                <section class='example'>
+                    <h1>Resolution Phase</h1>
+                    <ol>
+                        <li>The <em>attacker</em> adds together the attack scores of <i>Mato</i>, <i>Corvus</i> and <i>Battle Frenzy</i> together, including any extra attack Corvus may have gained from <i>Battle Frenzy</i> phase.</li>
+                        <li>The <em>attacker</em> adds together the shield scores that <i>Mato</i> and <i>Corus</i> have seperately.</li>
+                        <li>The <em>defender</em> adds together the attack and shiled scores of <i>Octavian</i>, <i>Eternal Discipline</i> and <i>10,000 drills</i>. Note that because <i>Octavian</i> is <em>blocking</em> his attack is 0, but he will still gain attack scores from the cards played.</li>
+                        <li>The <em>defender</em> chooses which of the two attacking heroes to apply her damage to.</li>
+                        <li>The targets' shield scores are subtracted from the incoming damage to determine how many <em>wounds</em> each side takes.</li>
+                        <li>Any KO'd heroes are removed and the combat ends.</li>
+                    </ol>
+                </section>
+            </section>
+        </main>
+        <aside>
+            <nav id="external">
+                <ul>
+                    <li><a href=''><img src="../images/icon/facebook.svg" /></a></li>
+                    <li><a href=''><img src="../images/icon/discord.svg" /></a></li>
+                    <li><a href=''><img src="../images/icon/twitter.svg" /></a></li>
+                    <li><a href=''><img src="../images/icon/instagram.svg" /></a></li>
+                    <li><a href=''><img src="../images/icon/reddit.svg" /></a></li>
+                    <li><a href=''>Heel Turn Games</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <footer>
+            <small>Legal stuff</small>
+        </footer>
+    </body>
+
+</html>
