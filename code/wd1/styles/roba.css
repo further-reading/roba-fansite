@@ -47,6 +47,31 @@ main {
 
 }
 
+header {
+    display: grid;
+    grid-template-columns: 10em auto;
+    grid-template-rows: auto;
+    grid-template-areas: "nav banner";
+    justify-items: start;
+    background-color: black;
+}
+
+header img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+}
+
+header figure{
+    text-align: center;
+    grid-area: banner;
+    background-color: black;
+}
+
+header ul{
+    grid-area: left;
+}
+
 /* grid */
 @media screen and (min-width: 70em){
     body {
@@ -63,7 +88,6 @@ main {
             grid-area: top-middle;
         }
 
-
     aside {
             grid-area: middle-right;
         }
@@ -76,37 +100,67 @@ main {
             grid-area: bottom;
             justify-self: center;
     }
-    
-    #globalnav ul{
-        width: 80%;
-}}
+}
+
+@media screen and (min-width: 50em){
+    .has_inset {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: auto;
+        grid-template-areas: "inset-left inset-right";
+    }
+
+    .has_inset p {
+        grid-area: inset-left;
+    }
+
+    section figure{
+        float:right;
+    }
+
+    header ul{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: space-around;
+    }
+
+    header li{
+        display: inline;
+        text-align: center;
+        flex-grow: 1;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header {
+        display: block;
+        background-color: transparent;
+        text-align: center;
+    }
+
+    header figure{
+        background-color: transparent;
+    }
+
+}
 
 /* specifics */
-
 /* sitewide navigation */
 
 #globalnav {
     background-color: #000;
-    text-align: center;
     padding: 0.5em;
 }
 
+#globalnav li{
+        margin: 0.5em;
+    }
+
 #globalnav ul{
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: row;
     list-style: none;
     color: white;
-    text-align: center;
-    align-items: space-around;
-}
-
-#globalnav li{
-    display: inline;
-    margin-left: auto;
-    margin-right: auto;
-    flex-grow: 1;
 }
 
 #globalnav a {
@@ -115,6 +169,7 @@ main {
     background-color: #031A3E;
     padding: 0.25em;
     color: white;
+    margin: 0.5em;
 }
 
 #globalnav a:hover, a#here{
@@ -145,13 +200,6 @@ main {
 
 #external li{
     display: inline;
-}
-
-.banner {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 450px;
 }
 
 /* sections */
@@ -209,24 +257,6 @@ section > * {
 
 .inset h1 {
     font-size: 1.5em;
-}
-
-@media screen and (min-width: 50em){
-    .has_inset {
-        margin: 0;
-        display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-rows: auto;
-        grid-template-areas: "inset-left inset-right";
-    }
-
-    .has_inset p {
-        grid-area: inset-left;
-    }
-
-    section figure{
-        float:right;
-    }
 }
 
 /* Example of Play */
