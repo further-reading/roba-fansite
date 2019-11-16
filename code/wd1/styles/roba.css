@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 16px;
     /* font-family: Arial; */
 }
 
@@ -44,61 +44,58 @@ main {
 }
 
 header {
-    display: grid;
-    grid-template-columns: 10em auto;
-    grid-template-rows: auto;
-    grid-template-areas: "nav banner";
-    justify-items: start;
-    background-color: black;
+    background-color: transparent;
+    text-align: center;
 }
 
 header img {
     margin-left: auto;
     margin-right: auto;
-    width: 450px;
+    max-width:100%
 }
 
 header figure{
     text-align: center;
     grid-area: banner;
-    background-color: black;
 }
+
+/* sitewide navigation */
+
+header nav {
+    background-color: #000;
+    padding: 0.5em;
+}
+
+header li{
+        margin: 0.5em;
+    }
 
 header ul{
-    grid-area: left;
+    list-style: none;
+    color: white;
+    text-align: left;
 }
 
-/* grid */
-@media screen and (min-width: 70em){
-    body {
-            display: grid;
-            grid-template-columns: 10% 80% 10%;
-            grid-template-rows: auto;
-            grid-template-areas: "left top-middle right"
-                                "left middle middle-right"
-                                "bottom bottom bottom"
-        }
+header nav a {
+    text-decoration: none;
+    border-radius: 0.5em;
+    background-color: #031A3E;
+    padding: 0.25em;
+    color: white;
+    margin: 0.5em;
+}
 
-
-    header {
-            grid-area: top-middle;
-        }
-
-    aside {
-            grid-area: middle-right;
-        }
-
-    main {
-            grid-area: middle
-        }
-
-    footer {
-            grid-area: bottom;
-            justify-self: center;
-    }
+header a:hover, a#here{
+    background-color: DeepSkyBlue;
+    color: #000;
 }
 
 @media screen and (min-width: 50em){
+
+    * {
+    font-size: 20px;
+    }
+
     .has_inset {
         margin: 0;
         display: grid;
@@ -109,10 +106,6 @@ header ul{
 
     .has_inset p {
         grid-area: inset-left;
-    }
-
-    section figure{
-        float:right;
     }
 
     header ul{
@@ -130,47 +123,34 @@ header ul{
         margin-right: auto;
     }
 
+}
+
+@media screen and (min-width: 70em){
+    body {
+            display: grid;
+            grid-template-columns: 10% 80% 10%;
+            grid-template-rows: auto;
+            grid-template-areas: "left top-middle right"
+                                "left middle middle-right"
+                                "bottom bottom bottom"
+        }
+
     header {
-        display: block;
-        background-color: transparent;
-        text-align: center;
+        grid-area: top-middle;
+        }
+
+    aside {
+        grid-area: middle-right;
+        }
+
+    main {
+        grid-area: middle
+        }
+
+    footer {
+        grid-area: bottom;
+        justify-self: center;
     }
-
-    header figure{
-        background-color: transparent;
-    }
-
-}
-
-/* specifics */
-/* sitewide navigation */
-
-#globalnav {
-    background-color: #000;
-    padding: 0.5em;
-}
-
-#globalnav li{
-        margin: 0.5em;
-    }
-
-#globalnav ul{
-    list-style: none;
-    color: white;
-}
-
-#globalnav a {
-    text-decoration: none;
-    border-radius: 0.5em;
-    background-color: #031A3E;
-    padding: 0.25em;
-    color: white;
-    margin: 0.5em;
-}
-
-#globalnav a:hover, a#here{
-    background-color: DeepSkyBlue;
-    color: #000;
 }
 
 /* exterenal nav */
