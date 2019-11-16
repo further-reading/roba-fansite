@@ -11,6 +11,10 @@ i {
     font-weight: bold;
 }
 
+* ul {
+    list-style: none;
+}
+
 section > * {
     padding: 0.5em;
 }
@@ -86,7 +90,7 @@ header nav a {
     margin: 0.5em;
 }
 
-header a:hover, a#here{
+header nav a:hover, a#here{
     background-color: DeepSkyBlue;
     color: #000;
 }
@@ -171,10 +175,6 @@ header a:hover, a#here{
     height: 45px;
 }
 
-#external ul {
-    list-style: none;
-}
-
 #external li{
     display: inline;
 }
@@ -202,13 +202,12 @@ main > section > h1, .example h1 {
     display:inline-block;
 }
 
-
-section p {
-    font-size: 1rem; /* phone css overwrites paragraph fontsize */
-}
-
 section > * {
     margin: 0.5em
+}
+
+p {
+    margin: 0.5em;
 }
 
 /* insets */
