@@ -90,7 +90,7 @@ header nav a {
     margin: 0.5em;
 }
 
-header a:hover, a#here{
+header nav a:hover, a#here{
     background-color: DeepSkyBlue;
     color: #000;
 }
