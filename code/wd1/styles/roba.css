@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     font-size: 16px;
-    /* font-family: Arial; */
+    font-family: "Times New Roman", serif;
 }
 
 i {
@@ -215,7 +215,7 @@ section figure {
 
 /* exterenal nav */
 
-#external {
+aside nav {
     padding: 0.5em;
     background-color: #031A3E;
     border-radius: 0.5em;
@@ -225,21 +225,31 @@ section figure {
     border-style: solid;
 }
 
-#external img {
-    width: 45px;
-    height: 45px;
+aside img {
+    width: 70px;
+    height: 70px;
+    padding: 0.25em;
 }
 
-#external li{
-    display: inline;
+aside nav {
+    width: auto;
 }
+
+aside {
+    text-align: center;
+}
+
+aside h1 {
+    font-size: 1em;
+    color: white;
+}
+
 /* Adds two column inset layouts*/
 @media screen and (min-width: 40em){
 
     html {
         background-image: url("../images/paladin_small.png"), url("../images/rin_small.png");
         background-repeat: no-repeat;
-        background-attachment: fixed;
         background-position: top left, top right;
     }
 
@@ -302,29 +312,33 @@ section figure {
     }
 }
 
-@media screen and (min-width: 70em){
-    html{
+@media screen and (min-width: 70em) {
+    html {
         background-image: url("../images/paladin.png"), url("../images/rin.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: top left, 115%;
     }
+
     body {
-            display: grid;
-            grid-template-columns: 20% 60% 20%;
-            grid-template-rows: auto;
-            grid-template-areas: "left top-middle right"
-                                "left middle middle-right"
-                                "bottom bottom bottom"
-        }
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: auto;
+        grid-template-areas: "left top-middle right" "left middle middle-right" "bottom bottom bottom"
+    }
 
     header {
         grid-area: top-middle;
-        }
+    }
 
     aside {
         grid-area: middle-right;
-        }
+        text-align: left;
+    }
+
+    aside nav {
+        width: 50%
+    }
 
     main {
         grid-area: middle
