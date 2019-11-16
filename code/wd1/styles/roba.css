@@ -202,13 +202,12 @@ main > section > h1, .example h1 {
     display:inline-block;
 }
 
-
-section p {
-    font-size: 1rem; /* phone css overwrites paragraph fontsize */
-}
-
 section > * {
     margin: 0.5em
+}
+
+p {
+    margin: 0.5em;
 }
 
 /* insets */
