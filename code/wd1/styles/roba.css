@@ -11,6 +11,10 @@ i {
     font-weight: bold;
 }
 
+* ul {
+    list-style: none;
+}
+
 section > * {
     padding: 0.5em;
 }
@@ -169,10 +173,6 @@ header a:hover, a#here{
 #external img {
     width: 45px;
     height: 45px;
-}
-
-#external ul {
-    list-style: none;
 }
 
 #external li{
