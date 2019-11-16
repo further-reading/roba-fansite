@@ -25,6 +25,8 @@ section > * {
 
 h1 {
     font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 html{
@@ -96,6 +98,142 @@ header nav a:hover, a#here{
     color: #000;
 }
 
+/* sections */
+
+main section{
+    margin: 0.5em;
+    padding: 0.1em;
+    background-color: DeepSkyBlue;
+    border-radius: 0.5em;
+    color: black;
+}
+
+main > section{
+    display: flex;
+    flex-direction: column;
+}
+
+main > section > h1, .example h1 {
+    background-color: #031A3E;
+    border-radius: 0.5em;
+    border-width: 0.125rem;
+    border-color: white;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    border-style: solid;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    display:inline-block;
+}
+
+section > * {
+    margin: 0.5em
+}
+
+p {
+    margin: 0.5em;
+}
+
+/* insets */
+
+.inset {
+    background-color: #031A3E;
+    border-color: white;
+    border-width: 0.125em;
+    border-radius: 1em;
+    border-style: solid;
+    margin: 0 auto;
+    grid-area: inset-right;
+    clear:both;
+}
+
+.inset * {
+    color: white;
+}
+
+.inset_skinny {
+    display: table;
+}
+
+.inset h1 {
+    font-size: 1.5em;
+}
+
+/* Example of Play */
+.example h1 {
+    margin-left: 0;
+}
+
+.example ol{
+    margin-top:0;
+}
+
+/* table of contents */
+.contents {
+    display: inline-block;
+    background-color: #031A3E;
+    border-color: white;
+    border-width: 0.125em;
+    border-radius: 1em;
+    border-style: solid;
+    padding: 0;
+    margin-right: auto;
+}
+
+.contents * {
+    padding: 0;
+    color: white;
+}
+
+.contents h1 {
+  font-size: 1.5em;
+}
+
+.contents li h1 a{
+  font-size: 1.25rem;
+}
+
+.contents ol{
+  margin: 1em;
+  padding: 1em;
+  padding-top: 0;
+}
+
+.contents ol ol{
+  margin: 1em;
+  padding: 0;
+}
+
+/* figures */
+section figure {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  padding: 1em;
+}
+
+/* exterenal nav */
+
+#external {
+    padding: 0.5em;
+    background-color: #031A3E;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    border-color: #fff;
+    border-width: 0.125rem;
+    border-style: solid;
+}
+
+#external img {
+    width: 45px;
+    height: 45px;
+}
+
+#external li{
+    display: inline;
+}
+
 @media screen and (min-width: 50em){
 
     * {
@@ -132,7 +270,17 @@ header nav a:hover, a#here{
         margin: 0 auto;
     }
 
+    main > section {
+        display: block;
+    }
 
+    main > section > h1, .example h1 {
+        margin-left: 0.5em;
+    }
+
+    .inset{
+        margin-left: 0.5em;
+    }
 }
 
 @media screen and (min-width: 70em){
@@ -161,133 +309,4 @@ header nav a:hover, a#here{
         grid-area: bottom;
         justify-self: center;
     }
-}
-
-/* exterenal nav */
-
-#external {
-    padding: 0.5em;
-    background-color: #031A3E;
-    border-radius: 0.5em;
-    margin: 0.5em;
-    border-color: #fff;
-    border-width: 0.125rem;
-    border-style: solid;
-}
-
-#external img {
-    width: 45px;
-    height: 45px;
-}
-
-#external li{
-    display: inline;
-}
-
-/* sections */
-
-main section{
-    margin: 0.5em;
-    padding: 0.1em;
-    background-color: DeepSkyBlue;
-    border-radius: 0.5em;
-    color: black;
-}
-
-main > section > h1, .example h1 {
-    background-color: #031A3E;
-    border-radius: 0.5em;
-    border-width: 0.125rem;
-    border-color: white;
-    color: white;
-    margin-right: auto;
-    border-style: solid;
-    text-align: center;
-    padding: 0.5rem 2rem;
-    display:inline-block;
-}
-
-section > * {
-    margin: 0.5em
-}
-
-p {
-    margin: 0.5em;
-}
-
-/* insets */
-
-.inset {
-    background-color: #031A3E;
-    border-color: white;
-    border-width: 0.125em;
-    border-radius: 1em;
-    border-style: solid;
-    margin-top: 0;
-    grid-area: inset-right;
-    clear:both;
-}
-
-.inset * {
-    color: white;
-}
-
-.inset_skinny {
-    display: table;
-}
-
-.inset h1 {
-    font-size: 1.5em;
-}
-
-/* Example of Play */
-.example h1 {
-    margin-left: 0;
-}
-
-.example ol{
-    margin-top:0;
-}
-
-/* table of contents */
-.contents {
-  display: inline-block;
-  background-color: #031A3E;
-  border-color: white;
-  border-width: 0.125em;
-  border-radius: 1em;
-  border-style: solid;
-  padding: 0;
-}
-
-.contents * {
-    padding: 0;
-    color: white;
-}
-
-.contents h1 {
-  font-size: 1.5em;
-}
-
-.contents li h1 a{
-  font-size: 1.25rem;
-}
-
-.contents ol{
-  margin: 1em;
-  padding: 1em;
-  padding-top: 0;
-}
-
-.contents ol ol{
-  margin: 1em;
-  padding: 0;
-}
-
-/* figures */
-section figure {
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  padding: 1em;
 }
