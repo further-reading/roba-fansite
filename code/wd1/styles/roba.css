@@ -15,6 +15,10 @@ i {
     list-style: none;
 }
 
+section li {
+    padding: 0.5em;
+}
+
 section > * {
     padding: 0.5em;
 }
@@ -64,21 +68,18 @@ header figure{
     grid-area: banner;
 }
 
-/* sitewide navigation */
-
 header nav {
     background-color: #000;
     padding: 0.5em;
 }
 
-header li{
-        margin: 0.5em;
-    }
-
 header ul{
-    list-style: none;
     color: white;
     text-align: left;
+}
+
+header li{
+    margin: 0.5em auto;
 }
 
 header nav a {
@@ -109,8 +110,12 @@ header nav a:hover, a#here{
         grid-template-areas: "inset-left inset-right";
     }
 
-    .has_inset p {
+    .has_inset .left {
         grid-area: inset-left;
+    }
+
+    .has_inset .right {
+        grid-area: inset-right;
     }
 
     header ul{
@@ -124,9 +129,9 @@ header nav a:hover, a#here{
         display: inline;
         text-align: center;
         flex-grow: 1;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
     }
+
 
 }
 
