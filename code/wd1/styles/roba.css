@@ -15,8 +15,8 @@ i {
     list-style: none;
 }
 
-section li {
-    padding: 0.5em;
+figcaption{
+    font-size: 0.8em;
 }
 
 section > * {
@@ -108,12 +108,12 @@ main section{
     color: black;
 }
 
-main > section{
+main > section, .example section{
     display: flex;
     flex-direction: column;
 }
 
-main > section > h1, .example h1 {
+h1[id], .example h1 {
     background-color: #031A3E;
     border-radius: 0.5em;
     border-width: 0.125rem;
@@ -161,9 +161,6 @@ p {
 }
 
 /* Example of Play */
-.example h1 {
-    margin-left: 0;
-}
 
 .example ol{
     margin-top:0;
@@ -233,7 +230,7 @@ section figure {
 #external li{
     display: inline;
 }
-
+/* Adds two column inset layouts*/
 @media screen and (min-width: 50em){
 
     * {
@@ -280,6 +277,14 @@ section figure {
 
     .inset{
         margin-left: 0.5em;
+    }
+
+    .has_inset .inset{
+        margin-left: auto;
+    }
+
+    .example section h1 {
+        margin-left: 0;
     }
 }
 
