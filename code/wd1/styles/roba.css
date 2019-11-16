@@ -15,12 +15,18 @@ i {
     list-style: none;
 }
 
+figcaption{
+    font-size: 0.8em;
+}
+
 section > * {
     padding: 0.5em;
 }
 
 h1 {
     font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 html{
@@ -64,21 +70,18 @@ header figure{
     grid-area: banner;
 }
 
-/* sitewide navigation */
-
 header nav {
     background-color: #000;
     padding: 0.5em;
 }
 
-header li{
-        margin: 0.5em;
-    }
-
 header ul{
-    list-style: none;
     color: white;
     text-align: left;
+}
+
+header li{
+    margin: 0.5em auto;
 }
 
 header nav a {
@@ -95,90 +98,6 @@ header nav a:hover, a#here{
     color: #000;
 }
 
-@media screen and (min-width: 50em){
-
-    * {
-    font-size: 20px;
-    }
-
-    .has_inset {
-        margin: 0;
-        display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-rows: auto;
-        grid-template-areas: "inset-left inset-right";
-    }
-
-    .has_inset p {
-        grid-area: inset-left;
-    }
-
-    header ul{
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        align-items: space-around;
-    }
-
-    header li{
-        display: inline;
-        text-align: center;
-        flex-grow: 1;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-}
-
-@media screen and (min-width: 70em){
-    body {
-            display: grid;
-            grid-template-columns: 10% 80% 10%;
-            grid-template-rows: auto;
-            grid-template-areas: "left top-middle right"
-                                "left middle middle-right"
-                                "bottom bottom bottom"
-        }
-
-    header {
-        grid-area: top-middle;
-        }
-
-    aside {
-        grid-area: middle-right;
-        }
-
-    main {
-        grid-area: middle
-        }
-
-    footer {
-        grid-area: bottom;
-        justify-self: center;
-    }
-}
-
-/* exterenal nav */
-
-#external {
-    padding: 0.5em;
-    background-color: #031A3E;
-    border-radius: 0.5em;
-    margin: 0.5em;
-    border-color: #fff;
-    border-width: 0.125rem;
-    border-style: solid;
-}
-
-#external img {
-    width: 45px;
-    height: 45px;
-}
-
-#external li{
-    display: inline;
-}
-
 /* sections */
 
 main section{
@@ -189,13 +108,19 @@ main section{
     color: black;
 }
 
-main > section > h1, .example h1 {
+main > section, .example section{
+    display: flex;
+    flex-direction: column;
+}
+
+h1[id], .example h1 {
     background-color: #031A3E;
     border-radius: 0.5em;
     border-width: 0.125rem;
     border-color: white;
     color: white;
     margin-right: auto;
+    margin-left: auto;
     border-style: solid;
     text-align: center;
     padding: 0.5rem 2rem;
@@ -218,7 +143,7 @@ p {
     border-width: 0.125em;
     border-radius: 1em;
     border-style: solid;
-    margin-top: 0;
+    margin: 0 auto;
     grid-area: inset-right;
     clear:both;
 }
@@ -236,9 +161,6 @@ p {
 }
 
 /* Example of Play */
-.example h1 {
-    margin-left: 0;
-}
 
 .example ol{
     margin-top:0;
@@ -246,13 +168,14 @@ p {
 
 /* table of contents */
 .contents {
-  display: inline-block;
-  background-color: #031A3E;
-  border-color: white;
-  border-width: 0.125em;
-  border-radius: 1em;
-  border-style: solid;
-  padding: 0;
+    display: inline-block;
+    background-color: #031A3E;
+    border-color: white;
+    border-width: 0.125em;
+    border-radius: 1em;
+    border-style: solid;
+    padding: 0;
+    margin-right: auto;
 }
 
 .contents * {
@@ -285,4 +208,110 @@ section figure {
   width: -moz-min-content;
   width: min-content;
   padding: 1em;
+}
+
+/* exterenal nav */
+
+#external {
+    padding: 0.5em;
+    background-color: #031A3E;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    border-color: #fff;
+    border-width: 0.125rem;
+    border-style: solid;
+}
+
+#external img {
+    width: 45px;
+    height: 45px;
+}
+
+#external li{
+    display: inline;
+}
+/* Adds two column inset layouts*/
+@media screen and (min-width: 50em){
+
+    * {
+    font-size: 20px;
+    }
+
+    .has_inset {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: auto;
+        grid-template-areas: "inset-left inset-right";
+    }
+
+    .has_inset .left {
+        grid-area: inset-left;
+    }
+
+    .has_inset .right {
+        grid-area: inset-right;
+    }
+
+    header ul{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: space-around;
+    }
+
+    header li{
+        display: inline;
+        text-align: center;
+        flex-grow: 1;
+        margin: 0 auto;
+    }
+
+    main > section {
+        display: block;
+    }
+
+    main > section > h1, .example h1 {
+        margin-left: 0.5em;
+    }
+
+    .inset{
+        margin-left: 0.5em;
+    }
+
+    .has_inset .inset{
+        margin-left: auto;
+    }
+
+    .example section h1 {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 70em){
+    body {
+            display: grid;
+            grid-template-columns: 10% 80% 10%;
+            grid-template-rows: auto;
+            grid-template-areas: "left top-middle right"
+                                "left middle middle-right"
+                                "bottom bottom bottom"
+        }
+
+    header {
+        grid-area: top-middle;
+        }
+
+    aside {
+        grid-area: middle-right;
+        }
+
+    main {
+        grid-area: middle
+        }
+
+    footer {
+        grid-area: bottom;
+        justify-self: center;
+    }
 }
