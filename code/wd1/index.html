@@ -14,6 +14,7 @@
             </figure>
             <nav>
                 <ul>
+                    <li><a id="here">Basics</a></li>
                     <li><a href='setup'>Game Setup</a></li>
                     <li><a href='action_phase'>Action Phase</a></li>
                     <li><a href='combat'>Combat</a></li>
@@ -23,41 +24,130 @@
             </nav>
         </header>
         <main>
-            <section id='text_box'>
-                <h1><img src="../images/bullet.png" role="presentation">Just Text</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere odio ipsum, ut commodo turpis consequat sit amet. Pellentesque aliquam libero vel turpis scelerisque, luctus consequat velit maximus. Ut facilisis vulputate scelerisque. Vestibulum aliquet quis dui nec facilisis. Etiam feugiat ligula eget dui scelerisque ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse facilisis elementum risus in elementum. Praesent maximus volutpat elementum.</p>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus quis efficitur mi. Cras tempus dignissim lorem, in porta nisi ultrices a. Sed pretium ipsum lobortis, interdum tellus et, pharetra erat. Aenean in neque neque. Morbi sed nulla ullamcorper, ullamcorper ante quis, maximus sapien. Nullam tellus ipsum, aliquet sed porttitor vitae, ornare eget neque. Sed erat arcu, tempus non venenatis at, aliquet at felis. Vestibulum a fringilla orci, sed molestie dui. Suspendisse odio urna, porta et dui non, interdum facilisis tortor.</p>
-                <p>Cras sed diam odio. Suspendisse in porta lectus. Suspendisse potenti. Vestibulum non mattis massa. Proin luctus dapibus neque. Cras vel porttitor eros, a blandit dui. Suspendisse potenti. Aenean semper magna eget magna lobortis, quis vulputate velit luctus. Sed eget rhoncus dui, vel mollis leo. Donec aliquet a dui vitae fringilla.</p>
+            <section>
+                <p><b>Radiant: Offline Battle Areana</b> is a competitive card game created by <i>Jack Murray</i> of <a href="htto://heelturngames.ie">Heel Turn Games</a>. This website is an <b>unofficial, fan created</b> summary of the ROBA rules.</p>
+                <p>This page will give an overview of the <b>basic concepts</b> of the game. Follow the links above for more info on specific phases of game play.</p>
+                <nav>
+                    <h1>Concepts</h1>
+                    <ul>
+                        <li><a href="#heroes">Heroes</a></li>
+                        <li><a href="#skills">Skill Cards</a></li>
+                        <li><a href="#power">Power</a></li>
+                        <li><a href="#conduits">Conduits and Lanes</a></li>
+                        <li><a href="#turn">Turn Order</a></li>
+                        <li><a href="#winning">Winning The Game</a></li>
+                    </ul>
+                </nav>
             </section>
-            <section id='text_box2'>
-                <h1><img src="../images/bullet.png" role="presentation">Text and Inset</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere odio ipsum, ut commodo turpis consequat sit amet. Pellentesque aliquam libero vel turpis scelerisque, luctus consequat velit maximus. Ut facilisis vulputate scelerisque. Vestibulum aliquet quis dui nec facilisis. Etiam feugiat ligula eget dui scelerisque ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse facilisis elementum risus in elementum. Praesent maximus volutpat elementum.</p>
-                <div class="inset">
-                        <h1 class="inset-header">Inset Header</h1>
-                        <p>Cras sed diam odio. Suspendisse in porta lectus. Suspendisse potenti. Vestibulum non mattis massa. Proin luctus dapibus neque. Cras vel porttitor eros, a blandit dui.</p>
+            <section>
+                <h1 id="heroes"><img src="images/bullet.png" role="presentation">Heroes</h1>
+                <div class="has_inset">
+                    <div>
+                        <p>In <i>ROBA</i> you battle with a team of <em>four heroes</em>, comprising of <em>three champions</em> and <em>one deity</em>. You choose them <a href='setup'>during setup</a>.</p>
+                        <p>You start the game with your <em>champions</em> in play, while your <em>deity</em> is kept secret until <b>manifested</b>.</p>
+                        <p>Each <b>hero</b> has three stats: <b>attack</b>, <b>defence</b> and <b>health</b> These are relevant in <a href='combat'><em>combat</em></a>.</p>
+                        <p>Each <b>champion</b> has an additional stat: <b>level up cost</b>. This is how many <b>power points</b> you must spend to <a href='action_phase#level'>level them up</a>.</p>
+                        <p>Some <b>champions</b> have a <em>passive</em> effect, which is printed at the bottom of their card.</p>
+                        <p>All <b>champions</b> also have an associated deck of 10 <b>skill cards</b>. You will shuffle your champions' skill cards after you <a href='setup#draft'>draft them</a>.</p>
+                        <p>Each <b>champion</b> is split into three <b>classes</b>: <em>Warrior</em>, <em>Tank</em> and <em>Support</em>. These indicate the kinds of cards the heroes are likely to have.</p>
+                        <p>Each <b>champion</b> also has a list of <b>keywords</b> printed on their cards. Most of these are just for flavour, except for <em>divine</em> and <em>evoker</em>.</p>
+                    </div>
+                    <figure class="inset">
+                        <img src="images/bran.png" alt="Bran's card. The art depicts an anthropomorphised bear wearing tribal gear. He is in a forest and his eyes glow with yellow magic. The card identifies him as Bran - Druid of the Thistle. He has the keywords Elemental and Evoker." title="Bran's card." />
+                        <figcaption>Illus: Studio 2Minds.</figcaption>
+                        <p>The numbers on the <em>left</em> of <i>Bran's</i> card indicate he has an <b>attack</b> of 2, <b>shield</b> of 0, <b>health</b> of 6 and <b>level up cost</b> of 4 respectively.</p>
+                        <p>He also has a once per turn <b>passive effect</b> that <b>heals</b> a hero when they <a href="action_phase#recover"><b>recover</b></a>.</p>
+                        <p>The scroll icon on the bottom right indicates that he is in the <em>support</em> class.</p>
+                    </figure>
                 </div>
-                <div class='has_inset'>
-                    <section class="inset">
-                        <h1>Floating Inset Header</h1>
-                        <p>Cras sed diam odio. Suspendisse in porta lectus. Suspendisse potenti. Vestibulum non mattis massa. Proin luctus dapibus neque. Cras vel porttitor eros, a blandit dui.</p>
-                    </section>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus quis efficitur mi. Cras tempus dignissim lorem, in porta nisi ultrices a. Sed pretium ipsum lobortis, interdum tellus et, pharetra erat. Aenean in neque neque. Morbi sed nulla ullamcorper, ullamcorper ante quis, maximus sapien. Nullam tellus ipsum, aliquet sed porttitor vitae, ornare eget neque. Sed erat arcu, tempus non venenatis at, aliquet at felis. Vestibulum a fringilla orci, sed molestie dui. Suspendisse odio urna, porta et dui non, interdum facilisis tortor.</p>
+            </section>
+            <section>
+                <h1 id="skills">Skill Cards</h1>
+                <div class="has_inset">
+                    <div>
+                    <p>Each <b>champion</b> comes with a set of <b>10 skill cards</b> which are shuffled together to make a deck during the <a href='setup#draft'>draft</a></p>
+                        <p>Each <b>skill card</b> will have an <b>attack</b> and/or a <b>shield</b> value printed on the <em>right</em> side of the card. These values are used for calculating damage in combat when played during a <a href="combat#clash">clash</a></p>
+                        <p><em>Some</em> <b>skill cards</b> have <b>clash</b> or <b>talent</b> abilities written in the text box at the bottom of the card. <b>Clash</b> abilities trigger during <a href="combat#clash">combat</a> while <b>talent</b> abilities are triggered when taking a <a href="action_phase#talent">talent action</a>.</p>
+                        <p>All <b>champions</b> have an <b>ultimate</b> skill which has a powerful <b>ultimate clash</b> or <b>ultimate talent</b> ability written in the card's text box. Only <em>levelled up</em> or <em>divine</em> heroes can use the <b>ultimate ability</b>. However the <b>attack</b> and/or a <b>shield</b> values on the card can be applied in a <a href="combat#clash">clash</a> by <em>any</em> hero.</p>
+                    </div>
+                    <figure class="inset">
+                        <img src="images/tsukidashi.jpg" title="Ichiro's Tsukidashi card" alt="Ichiro's Tsukidashi card. The art in this card depicts the sumo wrestler Ichiro slapping an opponent across the face. The opponent staggers back in pain, spittle flying from his mouth. The fight is taking place in a japanese style dojo."/>
+                        <figcaption>Illus: Evan Surya Nugraha.</figcaption>
+                        <p><i lang="ja">Ichiro's</i> <i lang="ja">Tsukidashi</i> card has an <b>attack</b> value of <b>3</b> when used in a <a href="combat#clash">clash</a>.</p>
+                        <p>Alternatively, it can be used as a <a href="action_phase#talent">talent</a> to move the hero and an enemy hero to another lane.</b></p>
+                    </figure>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere odio ipsum, ut commodo turpis consequat sit amet. Pellentesque aliquam libero vel turpis scelerisque, luctus consequat velit maximus. Ut facilisis vulputate scelerisque. Vestibulum aliquet quis dui nec facilisis. Etiam feugiat ligula eget dui scelerisque ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse facilisis elementum risus in elementum. Praesent maximus volutpat elementum.</p>
+            </section>
+            <section>
+                <h1 id="power"><img src="images/bullet.png" role="presentation">Power</h1>
+                <p>In <i>ROBA</i> players have to manage an economic layer in the form of <b>power points</b>. These points are earned and spent in various ways.</p>
+                <section>
+                    <h1><img src="images/bullet.png" role="presentation">Generating Power</h1>
+                    <ul>
+                        <li><em>One power</em> is earned when you <em>destroy</em> an enemy's <b>conduit</b>.</li>
+                        <li><em>Two power</em> is earned when you <em>K.O.</em> an enemy <b>hero</b>.</li>
+                        <li><em>One power</em> is earned at the <em>start</em> of every turn if you have at least one <b>evoker</b> in play.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1><img src="images/bullet.png" role="presentation">Spending Power</h1>
+                    <ul>
+                        <li>You can spend power to <b><a href='action_phase#level'>level up</a></b> a champion.</li>
+                        <li>You can spend <em>5 power</em> on a <b>one-time buyback</b> during a <a href="end_phase#revive">revive step</a>.</li>
+                        <li>You can spend power to <b>purchase items</b> during the <a href="end#shop">shop step</a> of the end phase.</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h1 id="conduits"><img src="images/bullet.png" role="presentation">Conduits and Lanes</h1>
+                <p>The play area in <i>ROBA</i> is divided into three <b>lanes</b> which represent paths between opposing <b>conduits</b>.</p>
+                <p>Each <b>lane<</b> can fit any number of <b>heroes</b>. You can move your <b>heroes</b> between lanes during the <a href="action_phase#move">action phase</a>.</p>
+                <p><em>Some champions</em> have <b>talent</b> and <b>clash</b> effects on their skill cards that move themselves and/or opposing heroes into <em>different</em> lanes.</p>
+                <p><b>Positioning your heroes</b> to <em>defend</em> your conduits and <em>destroy</em> your opponent's is a <strong>key part</strong> of the <i>ROBA</i> strategy.</p>
+                <p class="'inset">Destroying conduits should be a <strong>primary focus</strong> for players. Each ruined conduit gets you closer to <a href="#winning">winning the game</a> and denies an opponent a <a href="end_phase#revive">mass resurrect</a></p>
+            </section>
+            <section>
+                <h1 id="turn">Turn Order</h1>
+                <p>Each turn in <i>ROBA</i> is split into <em>three</em> phases.</p>
+                <section>
+                    <ol>
+                        <li><b>Preperation Phase</b> - The acting player generates <b>3 action points</b>. If the acting player has an <b>evoker</b> on the field, they also earn <b>1 power</b>.</li>
+                        <li><b>Action Phase</b> - The acting player spends their <b>action points.</b> For a detailed breakdown on available actions see the <b><a href='action_phase'>Action Phase</a></b> page.</li>
+                        <li><b>End Phase</b> - The acting player goes through the turn conclusion steps. For a detailed breakdown of these steps see the <b><a href='end_phase'>End Phase</a></b> page.</li>
+                    </ol>
+                </section>
+                <p class="inset">The <em>first player</em> only gets <strong>2 action points</strong> for their first turn. After that both players always get <em>3 action points</em> as normal.</p>
+            </section>
+            <section>
+                <h1 id="winning">Winning The Game</h1>
+                <p>In <i>ROBA</i> there are two ways for the game to end.</p>
+                <section>
+                    <h1>Killing a Deity</h1>
+                    <p><strong>A player will win the game if they defeat the opposing player's deity.</strong>.</p>
+                    <p>Deities are chosen <em>in secret</em> at the start of the game during <a href="setup#selections">setup</a>. They can be brought on the field willingly through the <a href="action_phase#">manifest action</a> or they can be forced to manifest when <strong>all conduits have been destroyed</strong>.</p>
+                    <p>When a deity <b>manifests</b> the player <b><em>must</em> banish</b> one of their champions. They can choose to <b>banish</b> any of their champions, even ones that are in the <em>graveyard</em>.</p>
+                    <p><b>Deities</b> are <em>powerful</em> heroes in their own right, but can be a fragile target if you are not <em>careful</em> once they are on the field.</p>
+                    <p class="inset">If two deities die in the <em>same</em> <a href="combat">combat</a>, the <strong>attacking player wins</strong>.</p>
+                </section>
+                <section>
+                    <h1>Running Out of Cards</h1>
+                    <p><strong>A player will lose the game if they cannot draw a card during the draw step of the end phase.</strong></p>
+                    <p class="'inset"><em>Many</em> champions and items allow you to draw extra cards, but <em>sometimes</em> it may hasten your demise!</p>
+                </section>
             </section>
         </main>
         <aside>
             <nav>
                 <h1>Official Links</h1>
-                <a href='http://heelturn.ie/'><img src="../images/icon/heelturn.png" title="Heel Turn Games Homepage" alt="Heel Turn Games Logo. It depicts a stick figure hitting another stick figure with a chair."/></a>
-                <a href='https://discord.gg/DKqZPUV'><img src="../images/icon/discord.svg" title="Discord Server" alt="Discord Logo"/></a>
-                <a href='https://twitter.com/radiantoba'><img src="../images/icon/twitter.svg" title="Follow ROBA on Twitter" alt="Twitter Logo"/></a>
-                <a href='https://www.instagram.com/radiantoba'><img src="../images/icon/instagram.svg" title="Follow ROBA on instagram" alt="Instagram Logo"/></a>
+                <a href='http://heelturn.ie/'><img src="images/icon/heelturn.png" title="Heel Turn Games Homepage" alt="Heel Turn Games Logo. It depicts a stick figure hitting another stick figure with a chair."/></a>
+                <a href='https://discord.gg/DKqZPUV'><img src="images/icon/discord.svg" title="Discord Server" alt="Discord Logo"/></a>
+                <a href='https://twitter.com/radiantoba'><img src="images/icon/twitter.svg" title="Follow ROBA on Twitter" alt="Twitter Logo"/></a>
+                <a href='https://www.instagram.com/radiantoba'><img src="images/icon/instagram.svg" title="Follow ROBA on instagram" alt="Instagram Logo"/></a>
             </nav>
             <nav>
                 <h1>Fan Pages</h1>
-                <a href='https://www.facebook.com/groups/432502020954651/'><img src="../images/icon/facebook.svg" title="Facebook ROBA Heroes" alt="Facebook Logo"/></a>
-                <a href='https://www.reddit.com/r/RadiantOBA/'><img src="../images/icon/reddit.svg" title="RadiantOBA Subreddit" alt="Reddit Logo"/></a>
+                <a href='https://www.facebook.com/groups/432502020954651/'><img src="images/icon/facebook.svg" title="Facebook ROBA Heroes" alt="Facebook Logo"/></a>
+                <a href='https://www.reddit.com/r/RadiantOBA/'><img src="images/icon/reddit.svg" title="RadiantOBA Subreddit" alt="Reddit Logo"/></a>
             </nav>
         </aside>
         <footer>
