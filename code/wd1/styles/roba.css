@@ -151,6 +151,9 @@ p {
     border-radius: 1em;
     border-style: solid;
     margin: 0.5em auto;
+}
+
+p.inset {
     padding: 1em;
 }
 
@@ -190,22 +193,28 @@ p {
 }
 
 .contents h1 {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .contents li h1 a{
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 
-.contents ol{
-  margin: 1em;
-  padding: 1em;
-  padding-top: 0;
+.contents > ol{
+    padding: 0 1em;
+}
+
+.contents ul{
+    margin: 1em;
+}
+
+.contents li{
+    padding: 0.2em 0;
 }
 
 .contents ol ol{
-  margin: 1em;
-  padding: 0;
+    margin: 1em;
+    padding: 0;
 }
 
 /* figures */
