@@ -298,7 +298,7 @@ aside h1 {
         grid-template-areas: "inset-left inset-right";
     }
 
-    p, section {
+    p, section, div {
         grid-area: inset-left;
     }
 
