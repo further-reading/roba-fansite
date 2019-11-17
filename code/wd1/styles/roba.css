@@ -31,6 +31,11 @@ html{
 
 footer{
     padding: 0.5em;
+    text-align: center;
+}
+
+footer *{
+    display: block;
 }
 
 ol{
@@ -176,43 +181,43 @@ p.inset {
 }
 
 /* table of contents */
-.contents {
+main nav {
     display: inline-block;
     background-color: #031A3E;
     border-color: white;
     border-width: 0.125em;
     border-radius: 1em;
     border-style: solid;
-    padding: 0;
     margin-right: auto;
+    padding: 1em;
 }
 
-.contents * {
+main nav * {
     padding: 0;
     color: white;
 }
 
-.contents h1 {
+main nav h1 {
     font-size: 1.5em;
 }
 
-.contents li h1 a{
+nav li h1 a{
     font-size: 1.25rem;
 }
 
-.contents > ol{
+nav > ol{
     padding: 0 1em;
 }
 
-.contents ul{
+main nav ul{
     margin: 1em;
 }
 
-.contents li{
+main nav li{
     padding: 0.2em 0;
 }
 
-.contents ol ol{
+nav ol ol{
     margin: 1em;
     padding: 0;
 }
@@ -307,7 +312,7 @@ aside h1 {
         grid-template-areas: "inset-left inset-right";
     }
 
-    p, section, div {
+    section * {
         grid-area: inset-left;
     }
 
@@ -373,7 +378,7 @@ aside h1 {
     }
 }
 
-@media screen and (min-width: 70em) {
+@media screen and (min-width: 80em) {
     html {
         background-image: url("../images/paladin.png"), url("../images/rin.png");
         background-repeat: no-repeat;
