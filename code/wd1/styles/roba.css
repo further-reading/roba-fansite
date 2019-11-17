@@ -15,10 +15,6 @@ i {
     list-style: none;
 }
 
-figcaption{
-    font-size: 0.8em;
-}
-
 section > * {
     padding: 0.5em;
 }
@@ -43,6 +39,9 @@ ol{
 
 small {
     font-size: 0.6em;
+}
+
+footer{
     color: white;
 }
 
@@ -63,11 +62,6 @@ header img {
     margin-left: auto;
     margin-right: auto;
     max-width:100%
-}
-
-header figure{
-    text-align: center;
-    grid-area: banner;
 }
 
 header nav {
@@ -156,9 +150,8 @@ p {
     border-width: 0.125em;
     border-radius: 1em;
     border-style: solid;
-    margin: 0 auto;
-    grid-area: inset-right;
-    clear:both;
+    margin: 0.5em auto;
+    padding: 0.5em;
 }
 
 .inset * {
@@ -223,6 +216,32 @@ section figure {
   padding: 1em;
 }
 
+figure *{
+    font-size: 0.8rem;
+}
+
+figure {
+    display: table;
+    margin: 0 auto;
+}
+
+.fill {
+    display: None;
+}
+
+figure img{
+    margin: auto;
+}
+
+figure small{
+    font-size: 0.6em;
+}
+
+header figure{
+    text-align: center;
+    grid-area: banner;
+}
+
 /* exterenal nav */
 
 aside nav {
@@ -255,7 +274,7 @@ aside h1 {
 }
 
 /* Adds two column inset layouts*/
-@media screen and (min-width: 40em){
+@media screen and (min-width: 50em){
 
     html {
         background-image: url("../images/paladin_small.png"), url("../images/rin_small.png");
@@ -279,12 +298,24 @@ aside h1 {
         grid-template-areas: "inset-left inset-right";
     }
 
-    .has_inset .left {
+    .left {
         grid-area: inset-left;
     }
 
-    .has_inset .right {
-        grid-area: inset-right;
+    .has_fill{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .has_fill p{
+        justify-self: flex-start;
+        align-self: flex-start;
+    }
+
+    .has_inset .fill{
+        flex-grow: 2;
+        align-self: stretch;
+        justify-self: stretch;
     }
 
     header ul{
@@ -311,6 +342,8 @@ aside h1 {
 
     .inset{
         margin-left: 0.5em;
+        color: white;
+        grid-area: inset-right;
     }
 
     .has_inset .inset{
@@ -319,6 +352,15 @@ aside h1 {
 
     .example section h1 {
         margin-left: 0;
+    }
+
+    .fill {
+        display: table;
+    }
+
+    .fill image{
+        display: table-cell;
+        vertical-align: middle;
     }
 }
 
