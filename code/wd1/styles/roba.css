@@ -379,6 +379,10 @@ article section:hover * {
         margin: 0 auto;
     }
 
+    header a{
+        font-size: 1.2em;
+    }
+
     main > section {
         display: block;
     }
