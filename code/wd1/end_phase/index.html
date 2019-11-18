@@ -25,7 +25,7 @@
         </header>
         <main>
             <section>
-                <p>The <b>end Ppase</b> occurs at the end of every turn. In this phase you have final steps you take to conclude your turn.</p>
+                <p>The <b>end phase</b> occurs at the end of every turn. In this phase you have final steps you take to conclude your turn.</p>
                 <nav>
                     <h1>Actions</h1>
                     <ol>
@@ -52,7 +52,11 @@
                         <p>Every hero can only have <em>1 item equipped</em>. When you buy the item, any <b>equip</b> effects will also trigger.</p>
                         <p>A hero <strong>cannot</strong> have two items equipped. You can <em>choose</em> to replace an item equipped by a hero, but doing so <em>banishes</em> the item.</p>
                         <figure class="fill">
-                            <img src="../images/boots.png" alt="The Masterwork Boots. The image depicts a pair of boots leather boots adorned with golden inlay. They have golden wings coming off the ankles." title="Masterwork Boots">
+                            <picture>
+                                <source media="(min-width: 50em)" src="../images/boots.png" />
+                                <source media="(min-width: 0)" src="" />
+                                <img src="../images/boots.png" alt="The Masterwork Boots. The image depicts a pair of boots leather boots adorned with golden inlay. They have golden wings coming off the ankles." title="Masterwork Boots">
+                            </picture>
                             <figcaption><small>Illus Finn McAvinchey</small></figcaption>
                         </figure>
                     </div>
@@ -64,7 +68,7 @@
                 </div>
             </section>
             <section>
-                <h1 id="draw">Draw Step</h1>
+                <h1 id="draw"><img src="../images/bullet.png" role="presentation">Draw Step</h1>
                 <p>The final act you take to end your turn is the <b>Draw Step</b>. For this step you draw a card from the top of your deck and add it to your hand.</p>
                 <p class="inset"><strong>If you cannot draw a card during this step you lose the game.</strong></p>
             </section>
