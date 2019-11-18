@@ -1,9 +1,11 @@
 /* defaults */
+@import url('https://fonts.googleapis.com/css?family=Calistoga|Merriweather&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: "Times New Roman", serif;
+    font-family: "Merriweather", "Times New Roman", serif;
 }
 
 em {
@@ -22,6 +24,9 @@ h1 {
     font-size: 2em;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Calistog', serif;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
 html{
@@ -337,10 +342,6 @@ article section:hover * {
 
     header nav {
         background-image: none;
-    }
-
-    * {
-    font-size: 20px;
     }
 
     .has_inset {
