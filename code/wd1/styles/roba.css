@@ -151,6 +151,10 @@ p {
     margin: 0.5em;
 }
 
+section a, section a *{
+    color: #FFF;
+}
+
 /* insets */
 
 .inset {
@@ -169,6 +173,10 @@ p.inset {
 
 .inset * {
     color: white;
+}
+
+.inset a, .inset a * {
+    color: #FF8C00
 }
 
 .inset_skinny {
@@ -294,7 +302,7 @@ aside h1 {
 
 /* glossary */
 
-article {
+.glossary {
     column-width: 15em;
 }
 
@@ -302,33 +310,36 @@ article * {
     font-size: 16px;
 }
 
-article section{
+article{
     border-radius: 0;
-    break-before: always;
     break-inside: avoid;
     border-bottom: 0.125em;
     border-bottom-color: white;
     border-bottom-style: solid;
 }
 
-article section h1 {
+article h1 {
     background-color: transparent;
     border: none;
     font-size: 1.25em;
+    color: black;
 }
 
-article section * {
-    color: black;
+article * {
     margin: 0;
     padding: 0;
 }
 
-article section:hover {
+article:hover {
     background-color: #031A3E;
 }
 
-article section:hover * {
+article:hover * {
     color: white;
+}
+
+article:hover a, article:hover a *{
+    color: #FF8C00;
 }
 
 /* Adds two column inset layouts*/
