@@ -11,12 +11,8 @@ em {
     font-weight: bold;
 }
 
-* ul {
+ul {
     list-style: none;
-}
-
-section > * {
-    padding: 0.5em;
 }
 
 h1 {
@@ -39,6 +35,11 @@ footer{
 
 footer *{
     display: block;
+}
+
+section > * {
+    margin: 0.5em;
+    padding: 0.5em;
 }
 
 ol{
@@ -103,6 +104,10 @@ header nav a:hover, a#here{
     color: #000;
 }
 
+p {
+    margin: 0.5em;
+}
+
 /* sections */
 
 main section, article{
@@ -111,11 +116,6 @@ main section, article{
     background-color: DeepSkyBlue;
     border-radius: 0.5em;
     color: black;
-}
-
-main > section{
-    display: flex;
-    flex-direction: column;
 }
 
 section > h1{
@@ -139,19 +139,15 @@ h1 img {
 }
 
 h1:hover img{
-    transform: rotate(-20deg);
+    transform: scale(1.25, 1.25);
 }
 
-section > * {
-    margin: 0.5em
+section a:link{
+    color: #940014;
 }
 
-p {
-    margin: 0.5em;
-}
-
-section a, section a *{
-    color: #750010;
+section a:visited{
+    color: #4a4a4a;
 }
 
 /* insets */
@@ -174,8 +170,12 @@ p.inset {
     color: white;
 }
 
-.inset a, .inset a * {
-    color: #FF8C00
+.inset a:link {
+    color: #FF8C00;
+}
+
+.inset a:visited{
+    color: #c93d00;
 }
 
 .inset_skinny {
@@ -202,6 +202,10 @@ main nav {
     border-style: solid;
     margin-right: auto;
     padding: 1em;
+}
+
+main nav a:visited, main nav a:link{
+    color: white;
 }
 
 main nav * {
@@ -236,10 +240,15 @@ nav ol ol{
 
 /* figures */
 section figure {
-  width: -webkit-min-content;
-  width: -moz-min-content;
   width: min-content;
   padding: 1em;
+}
+
+@supports not (width: min-content) {
+    section figure {
+        width: -moz-min-content;
+        width: -webkit-min-content;
+    }
 }
 
 figure *{
@@ -268,7 +277,7 @@ header figure{
     grid-area: banner;
 }
 
-/* exterenal nav */
+/* social links */
 
 aside nav {
     padding: 0.5em;
@@ -305,11 +314,11 @@ aside h1 {
     column-width: 15em;
 }
 
-article * {
+.glossary * {
     font-size: 16px;
 }
 
-article{
+.glossary section{
     border-radius: 0;
     break-inside: avoid;
     border-bottom: 0.125em;
@@ -317,31 +326,31 @@ article{
     border-bottom-style: solid;
 }
 
-article h1 {
+.glossary h1 {
     background-color: transparent;
     border: none;
     font-size: 1.25em;
     color: black;
 }
 
-article * {
+.glossary section * {
     margin: 0;
     padding: 0;
 }
 
-article:hover {
+.glossary section:hover {
     background-color: #031A3E;
 }
 
-article:hover * {
+.glossary section:hover * {
     color: white;
 }
 
-article:hover a, article:hover a *{
+.glossary section:hover a, .glossary section:hover a *{
     color: #FF8C00;
 }
 
-/* Adds two column inset layouts*/
+/* Adds two column inset layouts - tablets and portrait mobile*/
 @media screen and (min-width: 50em){
 
     html {
@@ -423,6 +432,8 @@ article:hover a, article:hover a *{
         vertical-align: middle;
     }
 }
+
+/* Adds three column layout and bigger background side banner images */
 
 @media screen and (min-width: 80em) {
     html {
