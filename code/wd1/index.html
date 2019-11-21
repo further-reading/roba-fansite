@@ -41,6 +41,10 @@
             </section>
             <section>
                 <h1 id="heroes"><img src="images/bullet.png" role="presentation" alt="ROBA conduit silhouette bulletpoint. A white, crystal like shape.">Heroes</h1>
+                <!--- The purpose of these divs is to create a two column section where the left and right columns are a variable amount of elements --->
+                <!--- I went with a div because I have a few of these sorts of collections where the amount in each side varies, making it hard to use grids --->
+                <!--- I also experimented with floats, but this resulted in the floating elements being placed at the bottom of the older sibling rather than in the entire right hand side --->
+                <!--- While this could be fixed by placing the floating element before the first sibling, this resulted in a bad layout in mobile view and for screen readers because the insets would be placed before the paragraphs they are adding to --->
                 <div class="has_inset">
                     <div>
                         <p>In <i>ROBA</i> you battle with a team of <b>four heroes</b>, comprising of <em>three champions</em> and <em>one deity</em>. You choose them <a href='setup'>during setup</a>.</p>
