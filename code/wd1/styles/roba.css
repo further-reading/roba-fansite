@@ -146,6 +146,17 @@ section a:visited{
     color: #4a4a4a;
 }
 
+
+section section h1 {
+        font-size: 1.5em;
+        text-transform: none;
+    }
+
+section section h1 img {
+        max-height: 1em;
+    }
+
+
 /* insets */
 
 .inset {
@@ -397,7 +408,7 @@ aside h1 {
         display: block;
     }
 
-    main > section > h1, .example h1 {
+    main section h1 {
         margin-left: 0.5em;
     }
 
