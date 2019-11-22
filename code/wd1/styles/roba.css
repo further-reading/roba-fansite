@@ -33,7 +33,7 @@ footer{
     text-align: center;
 }
 
-footer *{
+footer small{
     display: block;
 }
 

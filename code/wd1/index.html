@@ -41,12 +41,8 @@
             </section>
             <section>
                 <h1 id="heroes"><img src="images/bullet.png" role="presentation" alt="ROBA conduit silhouette bulletpoint. A white, crystal like shape.">Heroes</h1>
-                <!--- The purpose of these divs is to create a two column section where the left and right columns are a variable amount of elements --->
-                <!--- I went with a div because I have a few of these sorts of collections where the amount in each side varies, making it hard to use grids --->
-                <!--- I also experimented with floats, but this resulted in the floating elements being placed at the bottom of the older sibling rather than in the entire right hand side --->
-                <!--- While this could be fixed by placing the floating element before the first sibling, this resulted in a bad layout in mobile view and for screen readers because the insets would be placed before the paragraphs they are adding to --->
-                <div class="has_inset">
-                    <div>
+                <section class="has_inset">
+                    <section>
                         <p>In <i>ROBA</i> you battle with a team of <b>four heroes</b>, comprising of <em>three champions</em> and <em>one deity</em>. You choose them <a href='setup'>during setup</a>.</p>
                         <p>You start the game with your <em>champions in play</em>, while your <em>deity is kept secret</em> until manifested.</p>
                         <p>Each <b>hero</b> has three stats: <b>attack</b>, <b>defense</b> and <b>health</b> These are relevant in <a href='combat'>combat</a>.</p>
@@ -55,17 +51,17 @@
                         <p>All <b>champions</b> also have an associated deck of 10 <b>skill cards</b>. You will shuffle your champions' skill cards after you <a href='setup#draft'>draft them</a>.</p>
                         <p>Each <b>champion</b> is split into three <b>classes</b>: <em>Warrior</em>, <em>Tank</em> and <em>Support</em>. These indicate the kinds of cards the heroes are likely to have.</p>
                         <p>Each <b>hero</b> also has a list of <b>keywords</b> printed on their cards. Most of these are just for flavor, except for <em>divine</em> and <em>evoker</em>.</p>
-                    </div>
+                    </section>
                     <figure class="inset">
                         <img src="images/bran.png" alt="Bran's card. The art depicts a bear wearing tribal gear. He is in a forest and his eyes glow with yellow magic. The card identifies him as Bran - Druid of the Thistle. He has the keywords Elemental and Evoker." title="Bran's card." />
                         <figcaption>
-                            <small>Illus: Studio 2Minds</small>
+                            <small>Illus: <i>Studio 2Minds</i></small>
                             <p>The numbers on the <em>left</em> of <i>Bran's</i> card indicate he has an <b>attack</b> of 2, <b>shield</b> of 0, <b>health</b> of 6 and <b>level up cost</b> of 4 respectively.</p>
                             <p>He also has a once per turn <b>passive effect</b> that <b>heals</b> a hero when they <a href="action_phase#recover">recover</a>.</p>
                             <p>The scroll icon on the bottom right indicates that he is in the <em>support</em> class.</p>
                         </figcaption>
                     </figure>
-                </div>
+                </section>
             </section>
             <section>
                 <h1 id="skills"><img src="images/bullet.png" role="presentation" alt="ROBA conduit silhouette bulletpoint. A white, crystal like shape.">Skill Cards</h1>
@@ -75,16 +71,16 @@
                         <p>Each <b>skill card</b> will have an <b>attack</b> and/or a <b>shield</b> value printed on the <em>right</em> side of the card. These values are used for calculating damage in combat when played during a <a href="combat#clash">clash</a></p>
                         <p><em>Some</em> <b>skill cards</b> have <b>clash</b> or <b>talent</b> abilities written in the text box at the bottom of the card. <b>Clash</b> abilities trigger during <a href="combat#clash">combat</a> while <b>talent</b> abilities are triggered when taking a <a href="action_phase#talent">talent action</a>.</p>
                         <p>All <b>champions</b> have an <b>ultimate</b> skill which has a powerful <b>ultimate clash</b> or <b>ultimate talent</b> ability written in the card's text box. Only <em>levelled up</em> or <em>divine</em> heroes can use the <b>ultimate ability</b>. However the <b>attack</b> and/or a <b>shield</b> values on the card can always be applied in a <a href="combat#clash">clash</a> by <em>any hero</em>.</p>
-                    </sec>
+                    </section>
                     <figure class="inset">
                         <img src="images/tsukidashi.jpg" title="Ichiro's Tsukidashi card" alt="Ichiro's Tsukidashi card. The art in this card depicts the sumo wrestler Ichiro slapping an opponent across the face. The opponent staggers back in pain, spittle flying from his mouth. The fight is taking place in a japanese style dojo."/>
                         <figcaption>
-                            <small>Illus: Evan Surya Nugraha.</small>
+                            <small>Illus: <i>Evan Surya Nugraha</i></small>
                             <p><i lang="ja">Ichiro's</i> <i lang="ja">Tsukidashi</i> card has an <b>attack</b> value of 3 when used in a <a href="combat#clash">clash</a>.</p>
                             <p>Alternatively, it can be used as a <a href="action_phase#talent">talent</a> to <b>move</b> the hero and an enemy hero to another lane.</p>
                         </figcaption>
                     </figure>
-                </sec>
+                </section>
             </section>
             <section>
                 <h1 id="power"><img src="images/bullet.png" role="presentation" alt="ROBA conduit silhouette bulletpoint. A white, crystal like shape.">Power</h1>
