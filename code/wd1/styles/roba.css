@@ -46,10 +46,6 @@ ol{
   padding: 1em;
 }
 
-small {
-    font-size: 0.6em;
-}
-
 footer{
     color: white;
 }
@@ -268,8 +264,8 @@ figure img{
     margin: auto;
 }
 
-figure small{
-    font-size: 0.6em;
+small, small * {
+    font-size: 0.6rem;
 }
 
 header figure{
