@@ -371,11 +371,6 @@ aside h1 {
         grid-area: inset-left;
     }
 
-    .has_fill{
-        display: flex;
-        flex-direction: column;
-    }
-
     .has_inset .fill{
         margin: auto;
     }
