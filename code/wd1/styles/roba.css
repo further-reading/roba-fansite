@@ -177,11 +177,11 @@ p.inset {
     color: white;
 }
 
-.inset a:link {
+.inset a:link, small a:link {
     color: #FF8C00;
 }
 
-.inset a:visited{
+.inset a:visited, small a:visited{
     color: #c93d00;
 }
 
